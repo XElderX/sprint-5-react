@@ -39,3 +39,52 @@
   margin:1rem;
 
 }
+.itemsComponent{
+  
+  background: rgb(34,143,195);
+  background-color: #8EC5FC;
+  background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+  margin: 1rem auto 5rem auto;
+  padding: 2rem;
+  font-size: 24px;
+  color: rgb(65, 57, 5);
+  width: 50%;
+  border: solid 2px black;
+  border-radius: 12px;
+}
+.itemComponent{
+  display:flex;
+  justify-content: space-between;
+  margin: 1rem;
+  border-bottom: 2px solid #10abff;
+  
+}
+.deleteBtn{
+  background: linear-gradient(to bottom right, #c70000, #a36844);
+    border: 0;
+    border-radius: 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2.5;
+    outline: transparent;
+    margin-right: 0.5rem;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    touch-action: manipulation;
+  
+  }
+  .deleteBtn:hover {
+      background-color: initial;
+      background-position: 0 0;
+      color: #FF4742;
+    }
+  
+  .deleteBtn:focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+  }

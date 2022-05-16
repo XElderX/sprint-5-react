@@ -20,7 +20,6 @@ const ShoppinApp = () => {
   }, [inputValue])
 
   const addNewItem = (input) => {
-
     if(inputValue.length >=3) {
       let itemsUpdate = JSON.stringify([...itemsList, inputValue]);
         localStorage.setItem('shopinItems', itemsUpdate);
@@ -29,8 +28,11 @@ const ShoppinApp = () => {
     }
     else {
       setInputError("Item name you entered must have at least 3 characters!!!")
-    }
-
+    }}
+    const removeItem = (item) => {
+      let listAfterRemove = itemsList.filter((i) => i!==item);
+      localStorage.setItem('shopinItems', JSON.stringify(listAfterRemove));
+      setItemsList(listAfterRemove);
     }
   
   return (
@@ -53,6 +55,9 @@ const ShoppinApp = () => {
           {itemsList.map((item, index) =>(
             <div key={index}>
               <div className={styles.itemComponent}> {`${index + 1}.`} {item}  
+              <button
+              className={styles.deleteBtn}
+              onClick={() =>{removeItem(item)}}>Remove</button>
               </div>
             </div>
           ))}
