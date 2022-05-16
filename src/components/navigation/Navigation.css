@@ -1,0 +1,25 @@
+
+    .navbar {
+        display: flex;
+        justify-content:center;
+      }
+      .nav-item {
+        background-color: rgb(10, 92, 39) ;
+        margin: 5px;
+        width: 13rem;
+        text-align: center;
+        border-radius: 45px;
+      }
+      .nav-link.x{
+        color:rgb(153, 207, 46);
+        border-radius: 45px;
+      }
+      .nav-item >.nav-link.active{
+        font-size: 1.1rem;
+        color:rgb(122, 74, 138);
+        background-color:rgb(157, 193, 16);
+   
+      }
+      
+
+ 

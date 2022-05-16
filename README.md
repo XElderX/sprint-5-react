@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# Sprint 5
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##
+<h1>Introduction Project Details: </h1>
+<span><b>Project type: </b> Sprint assignment.  </span><br>
+<span><b>Tasks: </b> Create application with 2 navigation tabs. One of them have to be Shopping List App. Full details below in application features</span> <br>
+<span> <b> Website type: </b> React Application || Created with react components. This web app it's just DEMO for educational metters. Made with React js. styled with css styling rules <b>Only Navigation bar component' was styled Bootstrap </b> </span> <br>
+<span>This Repository is not contains all required files. For properly working project you have manually install them. <b> For instructions how to setup check <i>Project Launch procedure</i> below.</b> <br>
+<span>
+<span><strong>Author: </strong> Dalius Kriaučiūnas <a href="https://www.linkedin.com/in/dalius-kriauciunas/">Link to Linked In </a></span>
+###
 
-## Available Scripts
 
-In the project directory, you can run:
+<h1>Application features </h1>
+<span> Project contains: </span>
+<ol>
+  <li>React-based content. </li>
+  <li>Application with 2 routering tabs (greet and shopping list ). </li>
+  <li>Navigation bar. </li>
+  <li>Shopping list app with these functionalities: </li>
+  <ol>
+<li>Add item to the list;</li>
+<li>Remove item from the list;</li>
+<li>Read it from local storage (after app refresh);</li>
+<li>*Display Items from localstorage;</li>
+<li>*Can add item from localstorage;</li>
+<li>*delete item from localstorage;</li>
+<li>Edit items from the list(update);</li>
+</ol>
+  <li>Responsive website (Desktop and mobile).</li>
+</ol>
 
-### `npm start`
+<br>
+####
+<h1> Project Launch procedure. </h1>
+<span> For Properly working project you have to do these steps: </span>
+<ol>
+  <li>Since it's use react library you can't directly check application view.</li>
+  <li><b>(*required)</b> You have Clone this repository to your computer.Basic way to do using Git bash command:<b> git clone https://github.com/XElderX/sprint5.git  </b> </li>
+  <li><b>(*required)</b> Once you have project localy. You need modules, to do that  <b> npm install (in a package directory, no arguments) </b></li>
+  <li><b>(optional)</b> For authentic navigation bar you also have to install bootstrap with command: <b> npm install --save bootstrap</b> be sure that you are at correct terminal path. Afterwards insert this line: <i> import 'bootstrap/dist/css/bootstrap.min.css';</i> in <b> src/index.js </b> </li>
+  <li><b>(*required)</b> Run it by typing <i> npm start/i> command line </li>
+  <li>In few moment application have to pop up in browser </li>
+</ol>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+####
