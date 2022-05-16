@@ -59,6 +59,35 @@
   border-bottom: 2px solid #10abff;
   
 }
+.editBtn{
+  background: linear-gradient(to bottom right, #47ef79, #FF9A5A);
+    border: 0;
+    border-radius: 12px;
+    color: #FFFFFF;
+    cursor: pointer;
+    display: inline-block;
+    font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 2.5;
+    outline: transparent;
+    margin-right: 0.5rem;
+    padding: 0 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: box-shadow .2s ease-in-out;
+    touch-action: manipulation;
+  
+  }
+  .editBtn:hover {
+      background-color: initial;
+      background-position: 0 0;
+      color: #FF4742;
+    }
+  
+  .editBtn:focus {
+    box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
+  }
 .deleteBtn{
   background: linear-gradient(to bottom right, #c70000, #a36844);
     border: 0;

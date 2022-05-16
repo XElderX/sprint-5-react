@@ -5,6 +5,8 @@ const ShoppinApp = () => {
   const [itemsList, setItemsList]= useState([]);
   const [inputValue, setInputValue] = useState("");
   const [inputError, setInputError] = useState("");
+  const [editValue, setEditValue] = useState("")
+  const [buttonStatus, setButtonStatus] = useState(true);
 
   useEffect(() => {
     let localStoreItems = JSON.parse(localStorage.getItem("shopinItems"));
@@ -34,6 +36,25 @@ const ShoppinApp = () => {
       localStorage.setItem('shopinItems', JSON.stringify(listAfterRemove));
       setItemsList(listAfterRemove);
     }
+    const editItem = (item) => {
+      setInputValue(item);
+      setEditValue(item);
+      //console.log(`editvalue>>>${editValue}`);
+      setButtonStatus(false)
+    }
+    const updateItem = (item) => {
+      if(inputValue.length>=3){
+        let listAfterUpdate = JSON.parse(localStorage.getItem('shopinItems'));
+        listAfterUpdate.splice(listAfterUpdate.indexOf(editValue), 1, inputValue);
+        localStorage.setItem('shopinItems', JSON.stringify(listAfterUpdate));
+        setItemsList(listAfterUpdate);
+        setButtonStatus(true)
+        //console.log('update')
+      }
+      else {
+        setInputError("Item name you want to update must have at least 3 characters!!!")
+      }
+    }
   
   return (
     <div className={styles.ShoppinApp}>
@@ -46,7 +67,8 @@ const ShoppinApp = () => {
     />
      <button 
        className={styles.btnAddEdit}
-    onClick={(input) =>addNewItem(inputValue)}>Add</button>
+    onClick={(input) => (buttonStatus) ? addNewItem(inputValue) : updateItem(inputValue)}
+    >{buttonStatus ? 'Add' : 'Update'}</button>
     <p
     style={{color:"red", backgroundColor:"black", fontSize:"20px", fontWeight:"bold"}}
     >{inputError}</p> 
@@ -55,9 +77,13 @@ const ShoppinApp = () => {
           {itemsList.map((item, index) =>(
             <div key={index}>
               <div className={styles.itemComponent}> {`${index + 1}.`} {item}  
-              <button
-              className={styles.deleteBtn}
-              onClick={() =>{removeItem(item)}}>Remove</button>
+              <div className="itemBtns"><button
+          className={styles.editBtn}
+           onClick={() =>{editItem(item)}}>Edit</button>
+          <button
+          className={styles.deleteBtn}
+           onClick={() =>{removeItem(item)}}>Remove</button>
+           </div>
               </div>
             </div>
           ))}
