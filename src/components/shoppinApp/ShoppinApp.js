@@ -7,14 +7,21 @@ const ShoppinApp = () => {
   const [inputError, setInputError] = useState("");
   const [editValue, setEditValue] = useState("")
   const [buttonStatus, setButtonStatus] = useState(true);
+  const [clearBtnStatus, setClearBtnStatus] = useState(false)
 
   useEffect(() => {
     let localStoreItems = JSON.parse(localStorage.getItem("shopinItems"));
     setItemsList(localStoreItems || []);
+    
+
   }, []);
 
   useEffect(() => {
   setInputValue("");
+  if(itemsList.length > 0){
+    setClearBtnStatus(true);
+  }
+ 
   }, [itemsList] )
   useEffect(() => {
     setInputError('');
@@ -26,6 +33,7 @@ const ShoppinApp = () => {
       let itemsUpdate = JSON.stringify([...itemsList, inputValue]);
         localStorage.setItem('shopinItems', itemsUpdate);
         setItemsList([...itemsList, inputValue])
+        setClearBtnStatus(true);
         //console.log(itemsList);
     }
     else {
@@ -55,6 +63,12 @@ const ShoppinApp = () => {
         setInputError("Item name you want to update must have at least 3 characters!!!")
       }
     }
+    const clearAll = () => {
+      localStorage.clear()
+      setItemsList([]);
+      setButtonStatus(true);
+      setClearBtnStatus(false);
+    }
   
   return (
     <div className={styles.ShoppinApp}>
@@ -69,6 +83,12 @@ const ShoppinApp = () => {
        className={styles.btnAddEdit}
     onClick={(input) => (buttonStatus) ? addNewItem(inputValue) : updateItem(inputValue)}
     >{buttonStatus ? 'Add' : 'Update'}</button>
+    <button
+    
+    className={styles.clearBtn }
+    style={(clearBtnStatus) ? {display:"inline-block"} : {display: 'none'}}
+    onClick={()=>clearAll()}>Clear 
+    </button>
     <p
     style={{color:"red", backgroundColor:"black", fontSize:"20px", fontWeight:"bold"}}
     >{inputError}</p> 

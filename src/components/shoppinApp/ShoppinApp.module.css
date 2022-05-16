@@ -39,6 +39,30 @@
   margin:1rem;
 
 }
+.clearBtn {
+  background: #FF4742;
+  border: 1px solid #FF4742;
+  border-radius: 12px;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 2.5;
+  outline: transparent;
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  transition: box-shadow .2s ease-in-out;
+  touch-action: manipulation;
+}
+
+.clearBtn:hover {
+  background-color: initial;
+  background-position: 0 0;
+  color: #FF4742;
+}
 .itemsComponent{
   
   background: rgb(34,143,195);
