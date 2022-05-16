@@ -12,8 +12,6 @@ const ShoppinApp = () => {
   useEffect(() => {
     let localStoreItems = JSON.parse(localStorage.getItem("shopinItems"));
     setItemsList(localStoreItems || []);
-    
-
   }, []);
 
   useEffect(() => {
@@ -70,6 +68,7 @@ const ShoppinApp = () => {
       setClearBtnStatus(false);
     }
   
+  
   return (
     <div className={styles.ShoppinApp}>
     <input
@@ -78,6 +77,14 @@ const ShoppinApp = () => {
     placeholder={"Enter the item you want to add"}
     value={inputValue}
     onChange={(input) => setInputValue(input.target.value)}
+    onKeyDown={(e) => {
+      if (e.code === "Enter") {
+        
+        (buttonStatus) ? addNewItem(inputValue) : updateItem(inputValue)
+      }
+    }}
+    
+    
     />
      <button 
        className={styles.btnAddEdit}
@@ -110,6 +117,5 @@ const ShoppinApp = () => {
         </div>
   </div>
 );
-
 }
 export default ShoppinApp;
