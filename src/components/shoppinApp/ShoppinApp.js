@@ -68,7 +68,6 @@ const ShoppinApp = () => {
       setClearBtnStatus(false);
     }
   
-  
   return (
     <div className={styles.ShoppinApp}>
     <input
@@ -83,7 +82,6 @@ const ShoppinApp = () => {
         (buttonStatus) ? addNewItem(inputValue) : updateItem(inputValue)
       }
     }}
-    
     
     />
      <button 

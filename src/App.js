@@ -1,4 +1,4 @@
-import {BrowserRouter,Routes, Route} from "react-router-dom";
+import {HashRouter,Routes, Route} from "react-router-dom";
 import Navigation from './components/navigation/Navigation';
 import Greeter from './components/greeter/Greeter';
 import ShoppinApp from './components/shoppinApp/ShoppinApp';
@@ -8,7 +8,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
+      <HashRouter>
       <Navigation />
       <Routes>
         <Route index element={<Greeter/>}/>
@@ -17,9 +17,8 @@ function App() {
       </main>}/>
       <Route path='/greeter' element={<Greeter />}/>
       <Route path='/shoppinApp' element={<ShoppinApp />}/>
-     
       </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }

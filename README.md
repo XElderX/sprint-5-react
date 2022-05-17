@@ -39,7 +39,7 @@
   <li><b>(*required)</b> You have Clone this repository to your computer.Basic way to do using Git bash command:<b> git clone https://github.com/XElderX/sprint5.git  </b> </li>
   <li><b>(*required)</b> Once you have project localy. You need modules, to do that  <b> npm install (in a package directory, no arguments) </b></li>
   <li><b>(optional)</b> For authentic navigation bar you also have to install bootstrap with command: <b> npm install --save bootstrap</b> be sure that you are at correct terminal path. Afterwards insert this line: <i> import 'bootstrap/dist/css/bootstrap.min.css';</i> in <b> src/index.js </b> </li>
-  <li><b>(*required)</b> Run it by typing <i> npm start/i> command line </li>
+  <li><b>(*required)</b> Run it by typing <i> npm start</i> command line </li>
   <li>In few moment application will have to pop up in browser </li>
 </ol>
 
