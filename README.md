@@ -34,7 +34,9 @@
 ####
 <h1> Project Launch procedure. </h1>
 
-<h6>You can check Application by visiting <a href="https://xelderx.github.io/sprint-5-react/"></a> </h6>
+<h6>You can check Application by visiting </h6>
+
+<a href="https://xelderx.github.io/sprint-5-react/">link</a>
 ################################
 <h3>Project source code download </h3>
 <span>If you decided to download this project and use it. Here is instruction how to set up </span>
