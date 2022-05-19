@@ -1,6 +1,7 @@
 .ShoppinApp {
   background-color: #4158D0;
   background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  min-height: 80vh;
 }
 .btnAddEdit {
   background: linear-gradient(to bottom right, #EF4765, #FF9A5A);
@@ -64,20 +65,21 @@
   color: #FF4742;
 }
 .itemsComponent{
-  
+
   background: rgb(34,143,195);
   background-color: #8EC5FC;
   background-image: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
   margin: 1rem auto 5rem auto;
   padding: 2rem;
-  font-size: 24px;
+  font-size: 18px;
   color: rgb(65, 57, 5);
-  width: 50%;
+  width: 60%;
   border: solid 2px black;
   border-radius: 12px;
 }
 .itemComponent{
   display:flex;
+  text-align: center;
   justify-content: space-between;
   margin: 1rem;
   border-bottom: 2px solid #10abff;
@@ -141,3 +143,86 @@
   .deleteBtn:focus {
     box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
   }
+
+  @media screen and ( max-width: 360px ) {
+
+    
+    .btnAddEdit {
+      font-size: 12px;
+      font-weight: 500;
+    }
+
+    .appInput{
+      width: 50%;
+      font-size: 12px;
+      padding: 5px;
+      margin:0.5rem;
+    
+    }
+    .clearBtn {
+     font-size: 11px;
+      padding: 0 0.8rem;
+    }
+    .itemsComponent{
+      padding: 2rem;
+      font-size: 12px;
+      width: 80%;
+      
+    }
+    .itemComponent{
+      margin: 0.1rem;
+    }
+
+    .editBtn{
+        font-size: 11px;
+        margin-right: 0.2rem;
+        padding: 0 0.5rem;
+      } 
+    .deleteBtn{
+       font-size: 10px;
+        margin-right: 0.1rem;
+        padding: 0 0.5rem;
+      }
+  }
+  @media screen and ( max-width: 680px ) {
+
+    
+    .btnAddEdit {
+      font-size: 14px;
+    }
+
+    .appInput{
+      width: 50%;
+      font-size: 14px;
+      padding: 7px;
+      margin:0.9rem;
+    
+    }
+    .clearBtn {
+     font-size: 14px;
+      padding: 0 0.9rem;
+    }
+    .itemsComponent{
+      padding: 2rem;
+      font-size: 14px;
+      width: 80%;
+    }
+    .itemComponent{
+      margin: 0.2rem;
+    }
+
+    .editBtn{
+        font-size: 14px;
+        margin-right: 0.4rem;
+        padding: 0 0.8rem;
+      }
+   
+    .deleteBtn{
+       font-size: 14px;
+        margin-right: 0.4rem;
+        padding: 0 0.8rem;
+      }
+
+  }
+    
+  

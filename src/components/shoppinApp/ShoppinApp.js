@@ -27,7 +27,7 @@ const ShoppinApp = () => {
   }, [inputValue])
 
   const addNewItem = (input) => {
-    if(inputValue.length >=3) {
+    if(inputValue.length >=3 && inputValue.length <=20 ) {
       let itemsUpdate = JSON.stringify([...itemsList, inputValue]);
         localStorage.setItem('shopinItems', itemsUpdate);
         setItemsList([...itemsList, inputValue])
@@ -35,7 +35,7 @@ const ShoppinApp = () => {
         //console.log(itemsList);
     }
     else {
-      setInputError("Item name you entered must have at least 3 characters!!!")
+      setInputError("Item name you entered must have at least 3 characters, or not extend more than 20 characters!!!!!!")
     }}
     const removeItem = (item) => {
       let listAfterRemove = itemsList.filter((i) => i!==item);
@@ -49,7 +49,7 @@ const ShoppinApp = () => {
       setButtonStatus(false)
     }
     const updateItem = (item) => {
-      if(inputValue.length>=3){
+      if(inputValue.length>=3 && inputValue.length <=20){
         let listAfterUpdate = JSON.parse(localStorage.getItem('shopinItems'));
         listAfterUpdate.splice(listAfterUpdate.indexOf(editValue), 1, inputValue);
         localStorage.setItem('shopinItems', JSON.stringify(listAfterUpdate));
@@ -58,7 +58,7 @@ const ShoppinApp = () => {
         //console.log('update')
       }
       else {
-        setInputError("Item name you want to update must have at least 3 characters!!!")
+        setInputError("Item name you want to update must have at least 3 characters and not extend more than 20 characters!!!")
       }
     }
     const clearAll = () => {
@@ -101,8 +101,8 @@ const ShoppinApp = () => {
         style={(itemsList.length>0) ? {display:"block"}: {display:"none"}}>
           {itemsList.map((item, index) =>(
             <div key={index}>
-              <div className={styles.itemComponent}> {`${index + 1}.`} {item}  
-              <div className="itemBtns"><button
+              <div className={styles.itemComponent}> <span>{`${index + 1}. ${item}`}</span>   
+              <div className={styles.itemBtns}><button
           className={styles.editBtn}
            onClick={() =>{editItem(item)}}>Edit</button>
           <button

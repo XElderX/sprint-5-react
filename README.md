@@ -33,9 +33,13 @@
 <br>
 ####
 <h1> Project Launch procedure. </h1>
-<span> For Properly working project you have to do these steps: </span>
+
+<h6>You can check Application by visiting <a href="https://xelderx.github.io/sprint-5-react/"></a> </h6>
+################################
+<h3>Project source code download </h3>
+<span>If you decided to download this project and use it. Here is instruction how to set up </span>
+<span> Project instaliation </span>
 <ol>
-  <li>Since it's use react library you can't directly check application view.</li>
   <li><b>(*required)</b> You have Clone this repository to your computer.Basic way to do using Git bash command:<b> git clone https://github.com/XElderX/sprint5.git  </b> </li>
   <li><b>(*required)</b> Once you have project localy. You need modules, to do that  <b> npm install (in a package directory, no arguments) </b></li>
   <li><b>(optional)</b> For authentic navigation bar you also have to install bootstrap with command: <b> npm install --save bootstrap</b> be sure that you are at correct terminal path. Afterwards insert this line: <i> import 'bootstrap/dist/css/bootstrap.min.css';</i> in <b> src/index.js </b> </li>
