@@ -9,7 +9,7 @@ const Greeter = () =>{
   return (
     <div className={styles.Greeter}>
       Greeter Component
-      <h5 className={styles.h5}>{greetStatus ? `Hello, ${userName}` : ""}</h5>
+     
       <input type="text"
        className={styles.input}
        placeholder={'Please enter your name'} 
@@ -23,6 +23,9 @@ const Greeter = () =>{
        onClick={(e) =>{userName!==""? setGreetStatus(true) : setGreetStatus(false)
        }}
        >Submit your name</button>
+
+
+<h5 className={styles.h5}>{greetStatus ? `Hello, ${userName}` : ""}</h5>
   
     </div>
   );
